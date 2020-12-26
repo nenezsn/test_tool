@@ -13,6 +13,7 @@ const menu = [
   { title: '图片缩放', link: '/zoomImage' },
   { title: '文字loop', link: '/textLoop' },
   { title: '文字拷贝', link: '/textCopy' },
+  { title: '画板', link: '/drawboard' },
 ]
 
 function BasicLayout(props) {
