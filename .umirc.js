@@ -12,6 +12,7 @@ export default {
         { path: '/color', component: '../pages/color' },
         { path: '/intl', component: '../pages/intl' },
         { path: '/sparklines', component: '../pages/sparklines' },
+        { path: '/imgCrop', component: '../pages/imgCrop' },
       ]
     }
   ],

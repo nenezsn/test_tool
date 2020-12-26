@@ -9,6 +9,7 @@ const menu = [
   { title: '拾色器', link: '/color' },
   { title: 'intl', link: '/intl' },
   { title: '微线图', link: '/sparklines' },
+  { title: '图片裁剪', link: '/imgCrop' },
 ]
 
 function BasicLayout(props) {
