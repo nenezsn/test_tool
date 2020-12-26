@@ -14,6 +14,7 @@ export default {
         { path: '/sparklines', component: '../pages/sparklines' },
         { path: '/imgCrop', component: '../pages/imgCrop' },
         { path: '/zoomImage', component: '../pages/zoonImage' },
+        { path: '/textLoop', component: '../pages/textLoop' },
       ]
 
     }

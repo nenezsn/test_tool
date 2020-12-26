@@ -11,6 +11,7 @@ const menu = [
   { title: '微线图', link: '/sparklines' },
   { title: '图片裁剪', link: '/imgCrop' },
   { title: '图片缩放', link: '/zoomImage' },
+  { title: '文字loop', link: '/textLoop' },
 ]
 
 function BasicLayout(props) {

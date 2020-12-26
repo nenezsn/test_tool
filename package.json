@@ -19,6 +19,7 @@
     "react-draggable": "^4.4.3",
     "react-intl-universal": "^2.4.2",
     "react-sparklines": "^1.7.0",
+    "react-text-loop": "^2.3.0",
     "react-zmage": "^0.8.5-beta.36",
     "sortablejs": "^1.10.2"
   },
