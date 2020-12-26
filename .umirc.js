@@ -13,7 +13,9 @@ export default {
         { path: '/intl', component: '../pages/intl' },
         { path: '/sparklines', component: '../pages/sparklines' },
         { path: '/imgCrop', component: '../pages/imgCrop' },
+        { path: '/zoomImage', component: '../pages/zoonImage' },
       ]
+
     }
   ],
   chainWebpack: (config) => {

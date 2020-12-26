@@ -10,6 +10,7 @@ const menu = [
   { title: 'intl', link: '/intl' },
   { title: '微线图', link: '/sparklines' },
   { title: '图片裁剪', link: '/imgCrop' },
+  { title: '图片缩放', link: '/zoomImage' },
 ]
 
 function BasicLayout(props) {
