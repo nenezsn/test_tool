@@ -12,6 +12,7 @@ const menu = [
   { title: '图片裁剪', link: '/imgCrop' },
   { title: '图片缩放', link: '/zoomImage' },
   { title: '文字loop', link: '/textLoop' },
+  { title: '文字拷贝', link: '/textCopy' },
 ]
 
 function BasicLayout(props) {
