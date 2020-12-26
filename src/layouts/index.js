@@ -8,6 +8,7 @@ const menu = [
   { title: 'drag', link: '/drag' },
   { title: '拾色器', link: '/color' },
   { title: 'intl', link: '/intl' },
+  { title: '微线图', link: '/sparklines' },
 ]
 
 function BasicLayout(props) {

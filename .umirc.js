@@ -11,6 +11,7 @@ export default {
         { path: '/drag', component: '../pages/drag' },
         { path: '/color', component: '../pages/color' },
         { path: '/intl', component: '../pages/intl' },
+        { path: '/sparklines', component: '../pages/sparklines' },
       ]
     }
   ],
