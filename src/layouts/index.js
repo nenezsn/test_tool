@@ -6,6 +6,7 @@ import Link from 'umi/link'
 const menu = [
   { title: '首页', link: '/' },
   { title: 'drag', link: '/drag' },
+  { title: '拾色器', link: '/color' },
 ]
 
 function BasicLayout(props) {

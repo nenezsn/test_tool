@@ -9,6 +9,7 @@ export default {
       routes: [
         { path: '/', component: '../pages/index' },
         { path: '/drag', component: '../pages/drag' },
+        { path: '/color', component: '../pages/color' },
       ]
     }
   ],
