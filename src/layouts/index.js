@@ -7,6 +7,7 @@ const menu = [
   { title: '首页', link: '/' },
   { title: 'drag', link: '/drag' },
   { title: '拾色器', link: '/color' },
+  { title: 'intl', link: '/intl' },
 ]
 
 function BasicLayout(props) {
