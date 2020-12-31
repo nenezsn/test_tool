@@ -16,7 +16,8 @@ export default {
         { path: '/zoomImage', component: '../pages/zoonImage' },
         { path: '/textLoop', component: '../pages/textLoop' },
         { path: '/textCopy', component: '../pages/textCopy' },
-        { path: '/drawboard', component: '../pages/drawboard' }
+        { path: '/drawboard', component: '../pages/drawboard' },
+        { path: '/html2canvas', component: '../pages/html2canvas' }
       ]
 
     }

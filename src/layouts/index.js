@@ -14,6 +14,7 @@ const menu = [
   { title: '文字loop', link: '/textLoop' },
   { title: '文字拷贝', link: '/textCopy' },
   { title: '画板', link: '/drawboard' },
+  { title: 'html2canvas', link: '/html2canvas' },
 ]
 
 function BasicLayout(props) {
