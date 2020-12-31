@@ -26,7 +26,9 @@ function BasicLayout(props) {
           onClick={({ key }) => setCurrent(key)}
           selectedKeys={current}
           theme="dark"
-          mode="vertical">
+          mode="vertical"
+          style={{height:'100%'}}
+          >
           {
             menu.map(item =>
               <Menu.Item key={item.title}>
