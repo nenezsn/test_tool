@@ -20,16 +20,20 @@ app.use(formidable({
 // pdf上传
 app.post('/uploadPdf', (req, res, next) => {
   const file = req.files.file
+  const type = file.type.split('/').pop()
   const filename = Math.random().toString(36).slice(2, 15)
-  fs.readFile(file.path, function (error, buffer) {
-    fs.writeFile(`./dist/${filename}.jpg`, buffer);
-  });
-  res.json({ code: 200, url: `${filename}.jpg` })
+  fs.rename(file.path, `./dist/${filename}.${type}`, (err) => {
+    if (!err) {
+      res.json({ code: 200, url: `${filename}.${type}` })
+    } else {
+      res.json({ code: 404 })
+    }
+  })
 })
 
 
-app.get('/getLocalImg',(req,res,next)=>{
-  const data = fs.readFileSync(path.resolve(__dirname,'upload/pdf.png'))
+app.get('/getLocalImg', (req, res, next) => {
+  const data = fs.readFileSync(path.resolve(__dirname, 'upload/pdf.png'))
   res.send(data)
   // res.sendFile(path.resolve(__dirname,'upload/pdf.png'))
 })
@@ -45,20 +49,20 @@ app.get('/getRemoteImg', (req, resp, next) => {
   })
 })
 app.use('/getRemoteImg2', proxy('https://pbu-public.oss-cn-beijing.aliyuncs.com', {
-    //拼接代理地址
-    proxyReqPathResolver: function (req) {
-        return req.query.url
-    },
-    //拼接传递参数
-    proxyReqBodyDecorator: function (bodyContent, srcReq) {
-        return bodyContent
-    },
-    //处理接口的返回参数
-    userResDecorator: function (proxyRes, proxyResData, userReq, userRes) {
-        userRes.set('Access-Control-Allow-Origin', '*')
-        console.log('proxyResData',proxyResData)
-        return proxyResData
-    },
+  //拼接代理地址
+  proxyReqPathResolver: function (req) {
+    return req.query.url
+  },
+  //拼接传递参数
+  proxyReqBodyDecorator: function (bodyContent, srcReq) {
+    return bodyContent
+  },
+  //处理接口的返回参数
+  userResDecorator: function (proxyRes, proxyResData, userReq, userRes) {
+    userRes.set('Access-Control-Allow-Origin', '*')
+    console.log('proxyResData', proxyResData)
+    return proxyResData
+  },
 })
 )
 

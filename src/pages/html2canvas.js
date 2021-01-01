@@ -16,7 +16,9 @@ function Index() {
   function createPdf() {
     const pdf = new jsPDF('landscape', 'pt', [500, 102])
     pdf.addImage(previewUrl, 'PNG', 0, 0, 500, 102)
-    pdf.save("test.pdf")
+    // setFileBlob(pdf.output("blob")) pdf生成流
+    pdf.save("test.pdf") //下载
+    alert('生成pdf成功')
   }
   function uploadFile() {
     const fileData = new FormData()
@@ -27,7 +29,7 @@ function Index() {
       body: fileData
     }).then(data=>data.json())
     .then(data=>{
-      console.log('上传成功',data.url)
+      alert('上传成功',data.url)
     })
   }
   return <div>
@@ -39,7 +41,7 @@ function Index() {
     <img src={previewUrl} style={{ width: 500 }} />
     <button onClick={transform}>生成html</button>
     <button onClick={createPdf}>生成pdf</button>
-    <button onClick={uploadFile}>上传html</button>
+    <button onClick={uploadFile}>上传html或pdf</button>
   </div>
 }
 
