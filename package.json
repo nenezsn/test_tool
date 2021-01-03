@@ -15,6 +15,7 @@
     "express-formidable": "^1.2.0",
     "express-http-proxy": "^1.6.2",
     "html2canvas": "^1.0.0-rc.7",
+    "http": "^0.0.1-security",
     "https": "^1.0.0",
     "jspdf": "^2.2.0",
     "rc-queue-anim": "^1.8.5",
@@ -28,7 +29,8 @@
     "react-sparklines": "^1.7.0",
     "react-text-loop": "^2.3.0",
     "react-zmage": "^0.8.5-beta.36",
-    "sortablejs": "^1.10.2"
+    "sortablejs": "^1.10.2",
+    "ws": "^7.4.2"
   },
   "devDependencies": {
     "babel-eslint": "^9.0.0",
