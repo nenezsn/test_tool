@@ -12,6 +12,21 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(express.static('./dist'))
 
+
+app.get('/getInfo',(req,res,next)=>{
+  setTimeout(() => {
+    console.log('来了')
+    res.json({name:'wangb'})
+  }, 5000);
+  // res.send('你好')
+})
+app.post('/setInfo',(req,res,next)=>{
+  console.log('2222',req.body)
+  res.json({
+    code:200
+  })
+})
+
 app.use(formidable({
   encoding: 'utf-8',
   uploadDir: './dist',
@@ -19,6 +34,19 @@ app.use(formidable({
 }))
 // pdf上传
 app.post('/uploadPdf', (req, res, next) => {
+  const file = req.files.file
+  const type = file.type.split('/').pop()
+  const filename = Math.random().toString(36).slice(2, 15)
+  fs.rename(file.path, `./dist/${filename}.${type}`, (err) => {
+    if (!err) {
+      res.json({ code: 200, url: `${filename}.${type}` })
+    } else {
+      res.json({ code: 404 })
+    }
+  })
+})
+
+app.post('/uplodaImg', (req, res, next) => {
   const file = req.files.file
   const type = file.type.split('/').pop()
   const filename = Math.random().toString(36).slice(2, 15)

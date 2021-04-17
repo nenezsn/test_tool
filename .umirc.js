@@ -19,6 +19,7 @@ export default {
         { path: '/drawboard', component: '../pages/drawboard' },
         { path: '/html2canvas', component: '../pages/html2canvas' },
         { path: '/chatroom', component: '../pages/chatroom' },
+        { path: '/richText', component: '../pages/richText' },
       ]
 
     }
@@ -46,6 +47,9 @@ export default {
       },
     }],
   ],
+  cssLoaderOptions:{
+    localIdentName:'[local]'
+  },
   proxy: {
     "/local": {
       "target": "http://localhost:3000",

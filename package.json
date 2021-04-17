@@ -10,6 +10,7 @@
   "dependencies": {
     "antd": "^3.19.5",
     "body-parser": "^1.19.0",
+    "braft-editor": "^2.3.9",
     "dva": "^2.6.0-beta.6",
     "express": "^4.17.1",
     "express-formidable": "^1.2.0",

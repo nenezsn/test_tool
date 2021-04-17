@@ -16,6 +16,7 @@ const menu = [
   { title: '画板', link: '/drawboard' },
   { title: 'html2canvas', link: '/html2canvas' },
   { title: 'chatroom', link: '/chatroom' },
+  { title: '富文本', link: '/richText' },
 ]
 
 function BasicLayout(props) {
